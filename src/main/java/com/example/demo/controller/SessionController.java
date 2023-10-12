@@ -20,4 +20,13 @@ public class SessionController {
         if (name == null) return "no session yet";
         else return name;
     }
+
+    @GetMapping("/sessionInterceptorTest")
+    public void sessionInterceptorTest() {
+        System.out.println("====== sessionInterceptorTest ======");
+    }
+
+    // 아래 두 test api 모두에서 session이 있다면 출력하고 없다면 redirect 되어야 한다.
+    // test api 1
+    // test api 2
 }
